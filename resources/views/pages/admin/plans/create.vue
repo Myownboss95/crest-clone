@@ -107,6 +107,7 @@ import { error } from '@/js/toast';
     (form.features = form.features.filter((item, k) => form.features[key] != k));
 
     const createPlan = (_) => {
+      return console.log(form.data())
         if (!form.features.length) return error('At least a plan feature is required');
         form.post(route('admin.plans.store'));
   };

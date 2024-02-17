@@ -1,441 +1,445 @@
-{{-- @include("header") --}}
-@include('front.template.header')
+@extends('front.layouts.app')
 
+@section("content")
+    <section class="bg bg-secondary app-py-3 fade-appear-done fade-enter-done">
+      <div class="container app-py-3">
+        <div class="container row" style="display: flex; flex-wrap: wrap-reverse;">
+          <div class="col l5 s12 app-mobile-center"><br>
+            <h1>Profitability On The Rise</h1><br>
+            <p class="f-24">A trading platform that supports your financial goals.</p><br><a class="btn btn-large"
+              href="/signin.html">Get Started</a>
+          </div>
+          <div class="col l6 offset-l1 s12"><img src="{{asset('front/s/images/site/Landing1.png')}}" class="responsive-img"></div>
+        </div>
+      </div>
+    </section>
+    <section class="bg bg-secondary app-py-3 ">
+      <div class="container app-py-3">
+        <div class="row">
+          <div class="col l6 s12 wow fadeInUp slow" style="visibility: visible;">
+            <center><img src="{{asset('front/s/images/site/Experience.png')}}" class="responsive-img"
+                style="max-height: 60vh;"><br><br></center>
+          </div>
+          <div class="col l6 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+            <div class="container"><br><br>
+              <h2>Smooth Experience on any Device</h2><br>
+              <p class="app-text-justify f-24">Whether you prefer trading at your desk or on the go — Crest Capital
+                has got you covered.</p>
+              <p class="f-24">The custom-built platform has been adapted for any device you may choose and switching
+                is 100% seamless.</p><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="bg bg-secondary app-image-world">
+      <div class="app-py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12 app-py-3">
+              <h2>134 countries</h2>
+              <p class="f-24">Traders from all over the world trust Crest Capital. The platform interface is localized
+                into 12 languages.<br><br></p>
+            </div>
+            <div class="col l6 s12"></div>
+          </div>
+          <div class="row app-mobile-center">
+            <div class="col l3 s6">
+              <p class="app-py-1"><span class="flag-icon flag-icon-gb"></span> English</p>
+              <p class="app-py-1"><span class="flag-icon flag-icon-pt"></span> Português</p>
+              <p class="app-py-1"><span class="flag-icon flag-icon-cn"></span> Chinese</p>
+            </div>
+            <div class="col l3 s6">
+              <p class="app-py-1"><span class="flag-icon flag-icon-tr"></span> Türkçe</p>
+              <p class="app-py-1"><span class="flag-icon flag-icon-fr"></span> Français</p>
+              <p class="app-py-1"><span class="flag-icon flag-icon-de"></span> German</p>
+            </div>
+            <div class="col l3 s6">
+              <p class="app-py-1"><span class="flag-icon flag-icon-id"></span> Indonesia</p>
+              <p class="app-py-1"><span class="flag-icon flag-icon-pt"></span> Português</p>
+              <p class="app-py-1"><span class="flag-icon flag-icon-it"></span> Italiano</p>
+            </div>
+            <div class="col l3 s6">
+              <p class="app-py-1"><span class="flag-icon flag-icon-es"></span> Espanol</p>
+              <p class="app-py-1"><span class="flag-icon flag-icon-jp"></span> Japanese</p>
+              <p class="app-py-1"><span class="flag-icon flag-icon-se"></span> Svenska</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="bg bg-secondary app-py-2 app-mobile-center">
+      <div class="container app-py-3">
+        <div class="row container" style="display: flex; align-items: center; flex-wrap: wrap-reverse;">
+          <div class="col l6 s12">
+            <div class="container">
+              <center><img src="{{asset('front/s/images/site/Headset.webp')}}" class="responsive-img" style="max-height: 75vh;">
+              </center>
+            </div>
+          </div>
+          <div class="col l6 s12">
+            <h2 class="wow fadeInUp slow" style="visibility: hidden; animation-name: none;">Unrivaled 24/7 Customer
+              Service</h2>
+            <p class="wow fadeInUp slow" style="visibility: hidden; animation-name: none;">Got an issue? We respond
+              under 5 minutes on live chat and solve the problem for you.</p><br><b><span
+                class="material-icons notranslate alt-color">chevron_right</span>Contact us anytime, from
+              anywhere</b><br><br><b><span class="material-icons notranslate alt-color">chevron_right</span>One-to-one
+              trading support for all clients</b><br><br>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="bg bg-secondary app-py-3 app-image-gradient ">
+      <div class="container">
+        <div class=" row container">
+          <div class="col l6 s12"><br>
+            <h2 class="app-mobile-center white-text">Seven Years of Impeccable Service</h2>
+            <p class="app-text-justify light-text f-24">Crest Capital was founded in 2014 by a group of professionals
+              who are artfully combining the technical expertise required to Copy Professional Traders (If you can’t
+              trade on your own).</p>
+            <p class="app-text-justify light-text f-24">Forex Trading, Crypto Currency Trading and Stock Trading with
+              a dedicated corporate team, state of the art headquarters and a passion for helping those with a strong
+              desire to improve their lives</p>
+          </div>
+          <div class="col l6 s12">
+            <center>
+                <img src="{{asset('front/s/images/site/Seven.webp')}}" class="responsive-img" style="max-height: 70vh;"><br>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="bg bg-secondary app-py-3">
+      <div class="app-pb-3 center wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+        <h2>PRICING</h2>
+      </div>
+      <div class="row container">
+        <div class="col l3 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+          <div class="card hoverable app-py-1 app-px-2" style="border-radius: 10px;">
+            <center><span>PLATINUM</span><br><span class="alt-color"
+                style="font-size: 38px; font-weight: bold;">$50000</span><br><br><br>
+              <p>Min Deposit $50000</p>
+              <p>Referral Bonus</p>
+              <p>Full IT Support</p><br><a class="btn "
+                href="/user/deposits/crypto.html?amount=50000&amp;to=1">PURCHASE PLAN</a>
+            </center>
+          </div>
+        </div>
+        <div class="col l3 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+          <div class="card hoverable app-py-1 app-px-2" style="border-radius: 10px;">
+            <center><span>GOLD</span><br><span class="alt-color"
+                style="font-size: 38px; font-weight: bold;">$20000</span><br><br><br>
+              <p>Min Deposit $20000</p>
+              <p>Referral Bonus</p>
+              <p>Full IT Support</p><br><a class="btn "
+                href="/user/deposits/crypto.html?amount=49999&amp;to=1">PURCHASE PLAN</a>
+            </center>
+          </div>
+        </div>
+        <div class="col l3 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+          <div class="card hoverable app-py-1 app-px-2" style="border-radius: 10px;">
+            <center><span>PREMIUM</span><br><span class="alt-color"
+                style="font-size: 38px; font-weight: bold;">$5000</span><br><br><br>
+              <p>Min Deposit $5000</p>
+              <p>Referral Bonus</p>
+              <p>Full IT Support</p><br><a class="btn "
+                href="/user/deposits/crypto.html?amount=19999&amp;to=1">PURCHASE PLAN</a>
+            </center>
+          </div>
+        </div>
+        <div class="col l3 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+          <div class="card hoverable app-py-1 app-px-2" style="border-radius: 10px;">
+            <center><span>MINI</span><br><span class="alt-color"
+                style="font-size: 38px; font-weight: bold;">$500</span><br><br><br>
+              <p>Min Deposit $500</p>
+              <p>Referral Bonus</p>
+              <p>Full IT Support</p><br><a class="btn "
+                href="/user/deposits/crypto.html?amount=4999&amp;to=1">PURCHASE PLAN</a>
+            </center>
+          </div>
+        </div>
+      </div><br>
+    </section>
+    <section class="bg bg-secondary app-py-3 bg-gradient-charity">
+      <div class="container row app-py-3">
+        <div class="col l6 s12">
+          <h2 class="wow fadeInUp slow" style="visibility: hidden; animation-name: none;">Our Charity Missions</h2>
+          <br>
+          <p class="f-20 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">We believe everyone has
+            the right to a decent life. So, we channel a part of our earnings to bring positive change to local
+            communities.</p><br>
+          <p class="f-20 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">Crest Capital partners
+            with trusted humanitarian organizations and on-site volunteers to deliver emergency aid to disaster
+            victims and run awareness and education programs. We also help vulnerable communities to overcome poverty
+            and ensure healthy growth.</p>
+        </div>
+        <div class="col l6 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+          <center><img src="{{asset('front/s/images/site/Heart.png')}}" class="responsive-img" style="max-height: 350px;"></center>
+        </div>
+      </div>
+    </section>
+    <div class="bg app-py-2 ">
+      <div class="row container">
+        <h3 class="center">What is Bitcoin Mining?</h3><br>
+        <div class="video-container"><iframe width="853" height="480" src="https://www.youtube.com/embed/GmOzih6I1zs"
+            frameborder="0" allowfullscreen=""></iframe></div>
+      </div>
+    </div>
+    <section class="bg center app-py-3">
+      <div class="container">
+        <div class="row">
+          <div class="app-my-2 col l4 s12 wow fadeInUp" data-wow-delay="0.4s"
+            style="visibility: hidden; animation-delay: 0.4s; animation-name: none;"><img
+              src="{{asset('front/s/images/site/ServiceVector3.png')}}" class="responsive-img">
+            <h3 class="h4">Daily Mining Outputs</h3>
+            <p class="app-mb-2">Returns made from either trading or mining transactions will be added to your account
+              daily and automatically.</p>
+          </div>
+          <div class="app-my-2 col l4 s12 wow fadeInUp" style="visibility: hidden; animation-name: none;"><img
+              src="{{asset('front/s/images/site/ServiceVector1.png')}}" class="responsive-img">
+            <h3 class="h4">State of the Art Mining</h3>
+            <p class="app-mb-2">Productivity is a top notch quality for any investment. So, for every trade action or
+              blockchain mining algorithm that we offer, we’re providing some of the highest performing systems and
+              softwares that exist</p>
+          </div>
+          <div class="app-my-2 col l4 s12 wow fadeInUp" data-wow-delay="0.2s"
+            style="visibility: hidden; animation-delay: 0.2s; animation-name: none;"><img
+              src="{{asset('front/s/images/site/ServiceVector2.png')}}" class="responsive-img">
+            <h3 class="h4">Diverse Mining Portfolio</h3>
+            <p class="app-mb-2">Choose from a wide range of target assets for trading and over 10 major mining
+              algorithms that cut across 4 mineable cryptocurrencies</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="app-my-2 col l4 s12 wow fadeInUp" style="visibility: hidden; animation-name: none;"><img
+              src="{{asset('front/s/images/site/ServiceVector45.png')}}" class="responsive-img">
+            <h3 class="h4">Hardware is already running</h3>
+            <p class="app-mb-2">Don’t wrestle with rig assembly and hot, noisy miners at home. We have the fastest
+              bitcoin mining hardware running for you already</p>
+          </div>
+          <div class="app-my-2 col l4 s12 wow fadeInUp" data-wow-delay="0.2s"
+            style="visibility: hidden; animation-delay: 0.2s; animation-name: none;"><img
+              src="{{asset('front/s/images/site/ServiceVector55.png')}}" class="responsive-img">
+            <h3 class="h4">Intuitive Dashboard</h3>
+            <p class="app-mb-2">All the financial instruments data and charts that you need, when you need them</p>
+          </div>
+          <div class="app-my-2 col l4 s12 wow fadeInUp" data-wow-delay="0.4s"
+            style="visibility: hidden; animation-delay: 0.4s; animation-name: none;"><img
+              src="{{asset('front/s/images/site/ServiceVector65.png')}}" class="responsive-img">
+            <h3 class="h4">Secure and Private</h3>
+            <p class="app-mb-2">We value the privacy of our users, so we strive to keep collected user data to a
+              minimum level.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class=" app-pt-3">
+      <div class="wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+        <h2 class="center-align">FAQS</h2>
+      </div>
+      <div class="container app-py-3">
+        <div class="row">
+          <div class="col l6 s12">
+            <div class="app-padding wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+              <ul class="collapsible">
+                <li>
+                  <div class="collapsible-header" tabindex="0"><i
+                      class="material-icons notranslate">arrow_drop_down</i>How does copy trading work?</div>
+                  <div class="collapsible-body"><span>
+                      <p>Here is how the copier works: You, as an investor, simply select an expert or experts that
+                        you want to copy trades from. Once you are signed up, this is the only action needed on your
+                        part.</p><br>
+                      <p>Once you’ve taken care of the above, you are all set. There are no codes that you need to run
+                        or signals for you to manually input. Our software will handle the trade copying automatically
+                        on your behalf. We monitor your experts trading activity and as soon as there is a trade, we
+                        calculate all the necessary parameters and execute the trade.</p><br>
+                      <p>The only thing you have to make sure of is that you have enough available base currency that
+                        your expert trades with, in your trading account. How much is enough? First, you must meet the
+                        exchanges minimum order amount (let’s say about $10 per trade to be safe). That means that if
+                        your expert executes a 5% order, you must have at least $300 in your account total value (at
+                        100% expert allocation as an example). This also means that you need to have at least 10% or
+                        higher in available base currency to avoid missed trades.</p><br>
+                      <p>When the expert exits a position, you too will exit it. Automatically. You can also change
+                        allocation at any time.</p>
+                    </span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header" tabindex="0"><i
+                      class="material-icons notranslate">arrow_drop_down</i> What are the fees?</div>
+                  <div class="collapsible-body"><span>Every investor is to pay a 15% withdrawal fee to complete
+                      withdrawal process and each trader gets a set percentage of the profit they make.</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col l6 s12">
+            <div class="app-padding wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+              <ul class="collapsible">
+                <li>
+                  <div class="collapsible-header" tabindex="0"><i
+                      class="material-icons notranslate">arrow_drop_down</i>Who are the trading experts?</div>
+                  <div class="collapsible-body"><span>
+                      <p>We carefully select expert applicants. We get to know them as a trader and examine their
+                        trading performance over a period of time. We also tend to look for expert who already have a
+                        following to further confirm their competence (social proof). You can also read about every
+                        expert on their individual performance pages.</p><br>
+                    </span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header" tabindex="0"><i
+                      class="material-icons notranslate">arrow_drop_down</i>What is the recommended amount to start
+                    with?</div>
+                  <div class="collapsible-body"><span>
+                      <p>We suggest to have around $3000-$5000 in your account in BTC value due to exchanges minimum
+                        order requirements and so that you can at least cover the subscription cost every month.</p>
+                    </span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class=" app-pb-3">
+      <div class="row container ">
+        <div class="col l6 s12">
+          <div class="app-padding wow fadeInUp" style="visibility: hidden; animation-name: none;">
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header" tabindex="0"><i
+                    class="material-icons notranslate">arrow_drop_down</i>What is a trading platform?</div>
+                <div class="collapsible-body"><span> It is an online platform where traders track the quotes of
+                    different kinds of asset and make trades using the services provided by a broker.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header" tabindex="0"><i
+                    class="material-icons notranslate">arrow_drop_down</i>The Platform Doesn’t Load</div>
+                <div class="collapsible-body"><span>
+                    Try opening it in some other browser. We recommend using the latest Google Chrome.
 
-<!-- slideshow content begin -->
-<div class="uk-section uk-padding-remove-vertical in-slideshow-gradient">
-    <div id="particles-js" class="uk-light in-slideshow uk-background-contain" data-src="{{asset('front/img/in-equity-decor-1.svg')}}"
-        data-uk-img data-uk-slideshow>
-        <hr>
-        <ul class="uk-slideshow-items">
-            <li class="uk-flex uk-flex-middle">
-                <div class="uk-container">
-                    <div class="uk-grid-large uk-flex-middle" data-uk-grid>
-                        <div class="uk-width-1-2@s in-slide-text">
-                            <p class="in-badge-text uk-text-small uk-margin-remove-bottom uk-visible@m"><span
-                                    class="uk-label uk-label-success in-label-small">{{__('New')}}
-                                </span>{{__('Trade the markets directly with leading trading platforms.')}}</p>
-                            <h1 class="uk-heading-small">{{__("The world's most")}} <span class="in-highlight">{{__('powerful')}}</span>
-                                {{__('trade app.')}}</h1>
-                            <p class="uk-text-lead uk-visible@m">
-                                {{__('Get the most accurate market data, alerts, conversions,tools and more — all within the same app.')}}
-                            </p>
-                            <div class="uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s uk-margin-medium-top uk-visible@s"
-                                data-uk-grid data-market="TSLA,GOOGL,AAPL">
-                                <div>
-                                    <div
-                                        class="uk-card uk-card-small uk-card-secondary uk-card-body uk-border-rounded uk-flex uk-flex-middle">
-                                        <div class="in-symbol-logo">
-                                            <img src="{{asset('front/img/in-lazy.gif')}}" data-src="{{asset('front/img/in-symbol-tesla.svg')}}" alt="ticker"
-                                                width="28" height="28" data-uk-img>
-                                        </div>
-                                        <div class="in-price">
-                                            <h6 class="uk-margin-remove">TSLA<span class="uk-text-small"></span></h6>
-                                            <p class="uk-margin-remove"><span
-                                                    class="fas fa-spinner fa-xs"></span>loading...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div
-                                        class="uk-card uk-card-small uk-card-secondary uk-card-body uk-border-rounded uk-flex uk-flex-middle">
-                                        <div class="in-symbol-logo">
-                                            <img src="{{asset('front/img/in-lazy.gif')}}" data-src="{{asset('front/img/in-symbol-google.svg')}}"
-                                                alt="ticker" width="28" height="28" data-uk-img>
-                                        </div>
-                                        <div class="in-price">
-                                            <h6 class="uk-margin-remove">GOOGL<span class="uk-text-small"></span></h6>
-                                            <p class="uk-margin-remove"><span
-                                                    class="fas fa-spinner fa-xs"></span>loading...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="uk-visible@m">
-                                    <div
-                                        class="uk-card uk-card-small uk-card-secondary uk-card-body uk-border-rounded uk-flex uk-flex-middle">
-                                        <div class="in-symbol-logo">
-                                            <img src="{{asset('front/img/in-lazy.gif')}}" data-src="{{asset('front/img/in-symbol-apple.svg')}}" alt="ticker"
-                                                width="28" height="28" data-uk-img>
-                                        </div>
-                                        <div class="in-price">
-                                            <h6 class="uk-margin-remove">AAPL<span class="uk-text-small"></span></h6>
-                                            <p class="uk-margin-remove"><span
-                                                    class="fas fa-spinner fa-xs"></span>loading...</p>
-                                        </div>
-                                    </div>
+                    The system will not let you log in to the trading platform if your location is blacklisted.
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="in-slide-img">
-                            <img src="{{ asset('front/img/in-lazy.gif') }}"
-                                data-src="{{ asset('front/img/in-equity-slide-1.png') }}" alt="image-slide" style="height: 600px; width: auto" data-uk-img>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="uk-flex uk-flex-middle">
-                <div class="uk-container">
-                    <div class="uk-grid-large uk-flex-middle" data-uk-grid>
-                        <div class="uk-width-1-2@s in-slide-text">
-                            <p class="in-badge-text uk-text-small uk-margin-remove-bottom uk-visible@m">
-                                <span class="uk-label uk-label-success in-label-small">{{__('New')}}</span>
-                                {{__('Trade the markets directly with leading trading platforms.')}}
-                            </p>
-                            <h1 class="uk-heading-small">{{__('Reach out to new trading')}} <span
-                                    class="in-highlight">{{__('experience.')}}</span></h1>
-                            <p class="uk-text-lead uk-visible@m">
-                                {{__('Bring your trading ventures go around the world, way  beyond the space of your trading account.')}}</p>
-                            <div class="uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s uk-margin-medium-top uk-visible@s"
-                                data-uk-grid data-market="MCD,AMZN,MSFT">
-                                <div>
-                                    <div
-                                        class="uk-card uk-card-small uk-card-secondary uk-card-body uk-border-rounded uk-flex uk-flex-middle">
-                                        <div class="in-symbol-logo">
-                                            <img src="{{ asset('front/img/in-lazy.gif') }}"
-                                                data-src="{{ asset('front/img/in-symbol-mcdonalds.svg') }}" alt="ticker"
-                                                width="28" height="28" data-uk-img>
-                                        </div>
-                                        <div class="in-price">
-                                            <h6 class="uk-margin-remove">MCD<span class="uk-text-small"></span></h6>
-                                            <p class="uk-margin-remove"><span
-                                                    class="fas fa-spinner fa-xs"></span>loading...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div
-                                        class="uk-card uk-card-small uk-card-secondary uk-card-body uk-border-rounded uk-flex uk-flex-middle">
-                                        <div class="in-symbol-logo">
-                                            <img src="{{ asset('front/img/in-lazy.gif') }}"
-                                                data-src="{{ asset('front/img/in-symbol-amazon.svg') }}" alt="ticker"
-                                                width="28" height="28" data-uk-img>
-                                        </div>
-                                        <div class="in-price">
-                                            <h6 class="uk-margin-remove">AMZN<span class="uk-text-small"></span></h6>
-                                            <p class="uk-margin-remove"><span
-                                                    class="fas fa-spinner fa-xs"></span>loading...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="uk-visible@m">
-                                    <div
-                                        class="uk-card uk-card-small uk-card-secondary uk-card-body uk-border-rounded uk-flex uk-flex-middle">
-                                        <div class="in-symbol-logo">
-                                            <img src="{{ asset('front/img/in-lazy.gif') }}"
-                                                data-src="{{ asset('front/img/in-symbol-microsoft.svg') }}" alt="ticker"
-                                                width="28" height="28" data-uk-img>
-                                        </div>
-                                        <div class="in-price">
-                                            <h6 class="uk-margin-remove">MSFT<span class="uk-text-small"></span></h6>
-                                            <p class="uk-margin-remove"><span
-                                                    class="fas fa-spinner fa-xs"></span>loading...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="in-slide-img">
-                            <img src="{{ asset('front/img/in-lazy.gif') }}"
-                                data-src="{{ asset('front/img/in-equity-slide-2.png') }}" alt="image-slide"
-                                data-uk-img style="height: 600px; width: auto">
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <div class="uk-container">
-            <div class="uk-position-relative" data-uk-grid>
-                <ul class="uk-slideshow-nav uk-dotnav uk-position-bottom-right uk-flex uk-flex-middle"></ul>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- slideshow content end -->
+                    Perhaps, there is an unexpected technical problem. Our support consultants will help you solve it.
+                  </span></div>
+              </li>
+              <li>
+                <div class="collapsible-header" tabindex="0"><i
+                    class="material-icons notranslate">arrow_drop_down</i>When Will Deposits Be Credited</div>
+                <div class="collapsible-body"><span>
+                    The funds are usually credited to trading accounts fast, but sometimes it can take from 2 to 5
+                    business days (depending on your payment provider.)
 
-<!-- section content begin -->
-<div class="uk-section uk-section-primary uk-preserve-color in-equity-1">
-    <div class="uk-container">
-        <div style="margin-bottom: 12px">
-            <div style="display:flex; justify-content: space-between">
-                <strong style="font-size: 18px">{{__('Popular products')}}</strong>
-                <a href="{{route('register')}}" class="uk-button uk-button-secondary uk-border-rounded" style="z-index: 99">
-                    {{__('Create an Account')}}
-                </a>
-            </div>
+                    If the money has not been credited to your account right after you make a deposit, please wait for
+                    1 hour. If after 1 hour there is still no money, please wait and check again.
+                  </span></div>
+              </li>
+              <li>
+                <div class="collapsible-header" tabindex="0"><i
+                    class="material-icons notranslate">arrow_drop_down</i>Do I Need to Install Any Trading Software?
+                </div>
+                <div class="collapsible-body"><span> You can trade on our online platform in the web version right
+                    after you create an account. There is no need to install new software.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header" tabindex="0"><i
+                    class="material-icons notranslate">arrow_drop_down</i>What Should I Do If a System Error Occurs?
+                </div>
+                <div class="collapsible-body"><span> When system errors occurs, we recommend clearing your cache and
+                    cookies. You should also make sure you are using the latest version of the web browser. If you
+                    take these actions but the error still occurs, contact our support team.</span></div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="uk-grid-match uk-grid-medium uk-child-width-1-4@m uk-child-width-1-2@s uk-margin-bottom"
-            data-uk-grid>
-            <div>
-                <div class="uk-card uk-card-body uk-card-default uk-border-rounded">
-                    <div class="uk-flex uk-flex-middle">
-                        <span class="in-product-name red">EQ</span>
-                        <h5 class="uk-margin-remove">Stocks</h5>
-                    </div>
-                    <p>{{__('Access 19,000+ stocks across core and emerging markets on 40+ exchanges worldwide.')}}</p>
-                    <a href="/register"
-                        class="uk-button uk-button-text uk-float-right uk-position-bottom-right">{{__('Get Started')}}<i
-                            class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-body uk-card-default uk-border-rounded">
-                    <div class="uk-flex uk-flex-middle">
-                        <span class="in-product-name green">LQ</span>
-                        <h5 class="uk-margin-remove">{{__('Listed Options')}}</h5>
-                    </div>
-                    <p>{{__('Access 1,200+ listed options across equities, indices, interest rates, energy, metals and more.')}}
-                    </p>
-                    <a href="/register"
-                        class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Get Started<i
-                            class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-body uk-card-default uk-border-rounded">
-                    <div class="uk-flex uk-flex-middle">
-                        <span class="in-product-name blue">FU</span>
-                        <h5 class="uk-margin-remove">{{__('Futures')}}</h5>
-                    </div>
-                    <p>{{__('Access 300+ futures covering equity indices, energy, metals, agriculture, rates and more.')}}</p>
-                    <a href="/register"
-                        class="uk-button uk-button-text uk-float-right uk-position-bottom-right">{{__('Get Started')}}<i
-                            class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-body uk-card-default uk-border-rounded">
-                    <div class="uk-flex uk-flex-middle">
-                        <span class="in-product-name"><i class="fas fa-ellipsis-h fa-xs"></i></span>
-                        <h5 class="uk-margin-remove">{{__('More products')}}</h5>
-                    </div>
-                    <p>{{__('Get Started the full range of cash and leveraged products')}}</p>
-                    <a href="/register"
-                        class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Get Started<i
-                            class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- section content end -->
-<!-- section content begin -->
-<div class="uk-section in-equity-2 uk-background-contain uk-background-center" data-src="{{asset('front/img/in-equity-2-bg.png')}}" style="background-image:
-                                    url('{{asset('front/img/in-equity-2-bg.png')}}');"
-    data-uk-img>
-    <div class="uk-container uk-margin-top">
-        <div class="uk-grid uk-flex uk-flex-center">
-            <div class="uk-width-2xlarge@m uk-text-center">
-                <span class="uk-label uk-label-warning">{{__('Fast execution, low latency')}}<i
-                        class="fas fa-arrow-right fa-xs uk-margin-small-left"></i></span>
-                <h1 class="uk-margin-top">{{__('Your premium choice for trading currencies & stocks online')}}</h1>
-                <p class="uk-text-lead uk-margin-medium-top">
-                    {{__('Harness the power of technology to make a quicker, smarter and more precise decision on CFD currency pairs, stocks, commodities and more')}}
-                    </p>
-            </div>
-            <div class="uk-width-3-4@m uk-margin-medium-top">
-                <img class="uk-align-center" src="{{asset('front/img/in-lazy.gif')}}" data-src="{{asset('front/img/in-equity-2-img.png')}}" alt="image"
-                    width="758" height="334" data-uk-img>
-            </div>
-            <div class="uk-width-2xlarge@m uk-margin-medium-top">
-                <div class="uk-grid uk-child-width-1-4@m uk-child-width-1-4@s uk-text-center in-feature-box"
-                    data-uk-grid>
-                    <a href="#">
-                        <span class="in-icon-wrap">
-                            <img src="{{asset('front/img/in-lazy.gif')}}" data-src="{{asset('front/img/in-equity-2-icon-1.svg')}}" alt="icon-1"
-                                width="35" height="42" data-uk-img>
-                        </span>
-                        <p class="uk-margin-top">{{__('Trading calculators')}}</p>
-                    </a>
-                    <a href="#">
-                        <span class="in-icon-wrap">
-                            <img src="{{asset('front/img/in-lazy.gif')}}" data-src="{{asset('front/img/in-equity-2-icon-2.svg')}}" alt="icon-2"
-                                width="38" height="42" data-uk-img>
-                        </span>
-                        <p class="uk-margin-top">{{__('Market analysis')}}</p>
-                    </a>
-                    <a href="#">
-                        <span class="in-icon-wrap">
-                            <img src="{{asset('front/img/in-lazy.gif')}}" data-src="{{asset('front/img/in-equity-2-icon-3.svg')}}" alt="icon-3"
-                                width="42" height="42" data-uk-img>
-                        </span>
-                        <p class="uk-margin-top">{{__('Market reviews')}}</p>
-                    </a>
-                    <a href="#">
-                        <span class="in-icon-wrap">
-                            <img src="{{asset('front/img/in-lazy.gif')}}" data-src="{{asset('front/img/in-equity-2-icon-4.svg')}}" alt="icon-4"
-                                width="42" height="42" data-uk-img>
-                        </span>
-                        <p class="uk-margin-top">Trading academy</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- section content end -->
-<!-- section content begin -->
-<div class="uk-section in-equity-3 in-offset-top-20">
-    <div class="uk-container uk-margin-large-bottom">
-        <div class="uk-grid uk-flex uk-flex-middle">
-            <div class="uk-width-expand@m">
-                <h1 class="uk-margin-small-bottom">{{__('Tight spreads and')}} <span class="in-highlight">{{__('ultra-fast')}}</span>
-                    {{__('execution')}}</h1>
-                <h3 class="uk-margin-top uk-text-warning">
-                    {{__('Best market prices available so you can receive excellent conditions.')}}
-                </h3>
-                <hr class="uk-margin-medium-top uk-margin-medium-bottom">
-                <ul class="uk-list in-list-check">
-                    <li>{{__('Negative balance protection')}}</li>
-                    <li>{{__('Segregated and supervised client funds')}}</li>
-                    <li>{{__('Instant deposit & fast withdrawal')}}</li>
-                </ul>
-            </div>
-            <div class="uk-width-2xlarge uk-flex uk-flex-right uk-flex-center@s">
-                <div class="uk-card uk-card-body uk-card-default uk-border-rounded in-margin-top-60@s">
-                    <div id="tradingview-widget"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- section content end -->
-<!-- section content begin -->
-{{-- <div class="uk-section uk-padding-large">
-    <div class="uk-container in-wave-4">
-        <div class="uk-grid uk-flex uk-flex-center">
-            <div class="uk-width-1-1 uk-text-center">
-                <h1 class="uk-margin-medium-bottom"><span class="in-highlight">Complete</span> package for every
-                    traders</h1>
-            </div>
-            <div class="uk-width-3-4@m">
-                <div class="uk-grid-collapse  uk-child-width-1-2@m in-wave-pricing" data-uk-grid>
-                    <div>
-                        <div class="uk-card uk-card-default uk-card-body uk-box-shadow-medium">
-                            <p class="uk-text-small uk-text-uppercase">Minimum funding<span
-                                    class="uk-label uk-border-pill uk-text-small uk-margin-small-left">USD 200</span>
-                            </p>
-                            <h2 class="uk-margin-top uk-margin-remove-bottom">Classic account</h2>
-                            <p class="uk-text-lead uk-text-muted uk-margin-remove-top">Benefit from industry-leading
-                                entry prices</p>
-                            <hr>
-                            <ul class="uk-list uk-list-bullet">
-                                <li>One of the established industry leaders</li>
-                                <li>Three decades of trading know-how</li>
-                                <li>Award-winning customer service*</li>
-                                <li>Highly-regarded trader education*</li>
-                                <li>Advanced risk management</li>
-                                <li>Tax-free spread betting profits</li>
-                                <li>Low minimum deposit</li>
-                            </ul>
-                            <a href="/register"
-                                class="uk-button uk-button-default uk-border-rounded uk-align-center">Open an account<i
-                                    class="fas fa-chevron-circle-right fa-xs uk-margin-small-left"></i></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-default uk-card-body uk-box-shadow-large">
-                            <p class="uk-text-small uk-text-uppercase">Minimum funding<span
-                                    class="uk-label uk-border-pill uk-text-small uk-margin-small-left">USD 500</span>
-                            </p>
-                            <h2 class="uk-margin-top uk-margin-remove-bottom">Platinum account</h2>
-                            <p class="uk-text-lead uk-text-muted uk-margin-remove-top">Receive even tighter spreads and
-                                commissions</p>
-                            <hr>
-                            <ul class="uk-list uk-list-bullet">
-                                <li>Award-winning trading platform*</li>
-                                <li>Wide range of charting tools</li>
-                                <li>Fast, automated excecution</li>
-                                <li>Expert news & analysis</li>
-                                <li>Competitive spreads</li>
-                                <li>Advanced trading tools</li>
-                                <li>Tax-free spread betting profits</li>
-                            </ul>
-                            <a href="/register"
-                                class="uk-button uk-button-primary uk-border-rounded uk-align-center">Open an account<i
-                                    class="fas fa-chevron-circle-right fa-xs uk-margin-small-left"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col l6 s12">
+          <div class="app-padding wow fadeInUp" style="visibility: hidden; animation-name: none;">
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header" tabindex="0"><i
+                    class="material-icons notranslate">arrow_drop_down</i>What are bonuses?</div>
+                <div class="collapsible-body"><span>
+                    Bonus is the money the company provides to a client for trading. Traders don't lose their own
+                    funds when they lose a bonus. On the other hand, in case of success, they pocket the profit gained
+                    from using bonus funds.
+                  </span></div>
+              </li>
+              <li>
+                <div class="collapsible-header" tabindex="0"><i
+                    class="material-icons notranslate">arrow_drop_down</i>Trading and Quote Sessions</div>
+                <div class="collapsible-body"><span>
+                    A quote session is a period when the platform receives and transmits quotes. However, one can make
+                    trades within a slightly shorter trading session, which is part of a quote session.
 
-        </div>
-    </div>
-</div> --}}
-<!-- section content end -->
-<!-- section content begin -->
-<div class="uk-section in-equity-5">
-    <div class="uk-container uk-margin-remove-bottom">
-        <div class="uk-grid uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid>
-            <div>
-                <div class="uk-flex uk-flex-left in-award">
-                    <div class="uk-margin-small-right">
-                        <img src="{{asset('front/img/in-lazy.gif')}}" data-src="{{asset('front/img/in-equity-5-award-1.svg')}}" alt="award-1"
-                            width="91" height="82" data-uk-img>
-                    </div>
-                    <div>
-                        <h6>{{__('Best Mobile Trading App')}}</h6>
-                        <p class="provider">{{__('European CEO Magazine')}}</p>
-                        <p class="year">2019</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="uk-flex uk-flex-left in-award">
-                    <div class="uk-margin-small-right">
-                        <img src="{{asset('front/img/in-lazy.gif')}}" data-src="{{asset('front/img/in-equity-5-award-2.svg')}}" alt="award-2"
-                            width="91" height="82" data-uk-img>
-                    </div>
-                    <div>
-                        <h6>{{_('Best Forex Ecn Broker')}}</h6>
-                        <p class="provider">{{__('UK Forex awards')}}</p>
-                        <p class="year">2020</p>
-                    </div>
-                </div>
-            </div>
-            <div class="uk-visible@m">
-                <div class="uk-flex uk-flex-left in-award">
-                    <div class="uk-margin-small-right">
-                        <img src="{{asset('front/img/in-lazy.gif')}}" data-src="{{asset('front/img/in-equity-5-award-3.svg')}}" alt="award-3"
-                            width="91" height="82" data-uk-img>
-                    </div>
-                    <div>
-                        <h6>{{__('Best Trading Conditions')}}</h6>
-                        <p class="provider">{{__('Forex report magazine')}}</p>
-                        <p class="year">2021</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- section content end -->
-<!-- section content begin -->
-<div class="uk-section uk-section-primary uk-preserve-color in-equity-6 uk-background-contain uk-background-center"
-    data-src="{{asset('front/img/in-equity-decor-2.svg')}}" data-uk-img>
-    <div class="uk-container uk-margin-small-bottom">
-        <div class="uk-grid uk-flex uk-flex-center">
-            <div class="uk-width-2xlarge@m uk-text-center">
-                <h1>{{__('Ready to get started?')}}</h1>
-                <p class="uk-text-lead">{{__('Global access to financial markets from a single account')}}</p>
-            </div>
-            <div class="uk-width-3-4@m uk-margin-medium-top">
-                <div class="uk-flex uk-flex-center uk-flex-middle button-app">
-                    <div>
-                        <a href="/register" class="uk-button uk-button-secondary uk-border-rounded m-2" style="margin-right: 10px">{{__('Open your account')}}<i
-                                class="fas fa-arrow-circle-right uk-margin-small-left "></i></a>
-                    </div>
-                    <div>
-                        <a href="/login" class="uk-button uk-button-secondary uk-border-rounded ml-2">
-                            {{__('Log into your account')}}
-                            <i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
-                    </div>
+                    As a rule, a quote session starts 5-10 minutes earlier and ends 5-10 minutes later than the
+                    trading session. This is meant to protect traders from the risk of high volatility at the
+                    beginning and the end of the quote session.
 
+                    For example, a quote session for Apple shares starts at 13:30 GMT (US Summer Time) and ends at
+                    20:00. A trading session for Apple shares starts with a five-minute delay, i.e. at 13:35. And it
+                    ends at 19:55, which is 5 minutes before the quote session ends.
+                  </span></div>
+              </li>
+              <li>
+                <div class="collapsible-header" tabindex="0"><i
+                    class="material-icons notranslate">arrow_drop_down</i>Why Doesn’t a Trade Open Instantly?</div>
+                <div class="collapsible-body"><span> It takes a few seconds to get data from the servers of our
+                    liquidity providers. As a rule, the process of opening a new trade takes up to 4 seconds.</span>
                 </div>
-            </div>
+              </li>
+              <li>
+                <div class="collapsible-header" tabindex="0"><i
+                    class="material-icons notranslate">arrow_drop_down</i>How Can I View the History of My Trades?
+                </div>
+                <div class="collapsible-body"><span> All information about your recent trades is available in the
+                    “Trades” section. You can access the history of all your trades through the section with the same
+                    name as your user account.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header" tabindex="0"><i
+                    class="material-icons notranslate">arrow_drop_down</i>What Is the Most Active Time of Day for
+                  Trading?</div>
+                <div class="collapsible-body"><span>
+                    Trading activity depends on the working hours of major exchanges and increases at the time of
+                    important news releases. The most active trading sessions are European and North American ones.
+                    The European session begins at around 6:00 UTC and closes at 15:00 UTC. The North American trading
+                    session spans from 13:00 UTC until 22:00 UTC.
+
+                    Please note that some currency pairs and assets are available for trading for a limited period of
+                    time. The trading hours for each asset are specified in the “Trading Conditions” tab of the asset
+                     menu.
+                  </span></div>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
-</div>
-<!-- section content end -->
-</main>
-@include('front.template.footer')
+      </div>
+    </section>
+    <section class="bg app-pt-3 app-image-dots">
+      <div class="container">
+        <h2 class="center  wow fadeInUp slow" style="visibility: hidden; animation-name: none;">What Our Users Say
+        </h2>
+        <p class="center">See what our customer say about us</p><br><br>
+        <div class="container row center app-pt-3">
+          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style="visibility: hidden; animation-name: none;"><img
+              src="/uploads/images/TM2.jpeg" class="circle" style="max-height: 140px;"><br><b>Henri Pacocha</b>
+            <p class="app-px-1">I am extremely pleased with the platform, in terms of ease and speed of use and
+              reliability.</p><br>
+          </div>
+          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style="visibility: hidden; animation-name: none;"><img
+              src="/uploads/images/TW2.jpeg" class="circle" style="max-height: 140px;"><br><b>Michelle Kings</b>
+            <p class="app-px-1">Very simple and secure method to add some interest to your investments</p><br>
+          </div>
+          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style="visibility: hidden; animation-name: none;"><img
+              src="/uploads/images/TW1.jpeg" class="circle" style="max-height: 140px;"><br><b>Molly Corwin</b>
+            <p class="app-px-1">I tripled the bitcoin in my wallet with this service in just 7 days.</p><br>
+          </div>
+          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style="visibility: hidden; animation-name: none;"><img
+              src="/uploads/images/TM1.jpeg" class="circle" style="max-height: 140px;"><br><b>Lawson Robel</b>
+            <p class="app-px-1">Easy to use, risk-free trading platform that increases ones earning potential.</p><br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+@endsection
+
