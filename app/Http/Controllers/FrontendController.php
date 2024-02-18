@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Plan;
 use App\Models\Settings;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,11 @@ class FrontendController extends Controller
     public function home()
     {
         $setting = Settings::first();
-        return view("$this->theme.home", compact('setting'));
+        $plans = Plan::with('features')->latest();
+        return view("$this->theme.home", [
+            'setting' => $setting,
+            'plans' => $plans
+        ]);
     }
 
     public function about()

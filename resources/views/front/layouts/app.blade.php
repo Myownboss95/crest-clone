@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Crest Capital</title>
+  <title>{{ config('app.name')}}</title>
 
   <meta property=”og:title” content='Crest Capital' />
   
-  <meta property=”og:image” content=”{{ asset('front/images/site/logo.png') }}” />
+  <meta property=”og:image” content=”{{ asset('front/images/pwa/apple-touch-icon-114x114.png') }}” />
 
   <meta content="width=device-width, user-scalable=no" name="viewport" />
   <meta
@@ -25,7 +25,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{asset('front/images/pwa/favicon-16x16.png') }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{asset('front/images/pwa/favicon-32x32.png') }}">
   <link rel="icon" type="image/png" sizes="48x48" href="{{asset('front/images/pwa/favicon-48x48.png') }}">
-  <link rel="manifest" href="{{asset('front/images/pwa/manifest.json"') }}>
+  {{-- <link rel="manifest" href="{{asset('front/images/pwa/manifest.json"') }}> --}}
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#fff">
   <meta name="application-name" content="{{config('app.name')}}">
@@ -114,10 +114,9 @@
   <meta name="msapplication-TileImage" content="/{{asset('front/images/pwa/mstile-144x144.png') }}">
   <meta name="msapplication-config" content="/{{asset('front/images/pwa/browserconfig.xml') }}">
   <link rel="yandex-tableau-widget" href="{{asset('front/images/pwa/yandex-browser-manifest.json') }}">
-  <link href="crest-capital.css" rel="stylesheet">
+  <link href="{{asset('front/crest-capital.css')}}" rel="stylesheet">
 </head>
 <body style="position: relative; min-height: 100%; top: 0px;">
-    <noscript> You need to enable JavaScript to run this app. </noscript>
   
   
       <div class="navbar-fixed">
@@ -273,7 +272,9 @@
             must review the Service Agreement and Risk Disclosure Information.</small></div>
       </div>
     </section>
-<script src="crest-capital.js"></script>
+<script src="{{ asset('front/crest-capital.js')}}"></script>
+<script src="{{ asset('front/javascript/index.min.js')}}"></script>
+
 </body>
 
 </html>

@@ -9,7 +9,9 @@
             <p class="f-24">A trading platform that supports your financial goals.</p><br><a class="btn btn-large"
               href="/signin.html">Get Started</a>
           </div>
-          <div class="col l6 offset-l1 s12"><img src="{{asset('front/s/images/site/Landing1.png')}}" class="responsive-img"></div>
+          <div class="col l6 offset-l1 s12">
+            <img src="{{asset('front/images/site/landing.png')}}" class="responsive-img" style="width: 400px">
+          </div>
         </div>
       </div>
     </section>
@@ -17,13 +19,13 @@
       <div class="container app-py-3">
         <div class="row">
           <div class="col l6 s12 wow fadeInUp slow" style="visibility: visible;">
-            <center><img src="{{asset('front/s/images/site/Experience.png')}}" class="responsive-img"
-                style="max-height: 60vh;"><br><br></center>
+            <center><img src="{{asset('front/images/site/device.png')}}" class="responsive-img"
+                style="height: 40vh;"><br><br></center>
           </div>
-          <div class="col l6 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+          <div class="col l6 s12 wow fadeInUp slow" style= "visibility: visible; animation-name: none;">
             <div class="container"><br><br>
-              <h2>Smooth Experience on any Device</h2><br>
-              <p class="app-text-justify f-24">Whether you prefer trading at your desk or on the go — Crest Capital
+              <h2 style="color: white">Smooth Experience on any Device</h2><br>
+              <p class="app-text-justify f-24" style="color: white">Whether you prefer trading at your desk or on the go — Crest Capital
                 has got you covered.</p>
               <p class="f-24">The custom-built platform has been adapted for any device you may choose and switching
                 is 100% seamless.</p><br>
@@ -32,7 +34,17 @@
         </div>
       </div>
     </section>
-    <div class="bg bg-secondary app-image-world">
+    <div class="bg bg-secondary app-image-world" style="
+    background: url({{asset('front/images/site/World.webp')}});
+    background-color: rgba(0, 0, 0, 0);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+    ">
       <div class="app-py-3">
         <div class="container">
           <div class="row">
@@ -73,14 +85,14 @@
         <div class="row container" style="display: flex; align-items: center; flex-wrap: wrap-reverse;">
           <div class="col l6 s12">
             <div class="container">
-              <center><img src="{{asset('front/s/images/site/Headset.webp')}}" class="responsive-img" style="max-height: 75vh;">
+              <center><img src="{{asset('front/images/site/customer-service.png')}}" class="responsive-img" style="max-height: 35vh;">
               </center>
             </div>
           </div>
           <div class="col l6 s12">
-            <h2 class="wow fadeInUp slow" style="visibility: hidden; animation-name: none;">Unrivaled 24/7 Customer
+            <h2 class="wow fadeInUp slow" style= "visibility: visible; animation-name: none;">Unrivaled 24/7 Customer
               Service</h2>
-            <p class="wow fadeInUp slow" style="visibility: hidden; animation-name: none;">Got an issue? We respond
+            <p class="wow fadeInUp slow" style= "visibility: visible; animation-name: none;">Got an issue? We respond
               under 5 minutes on live chat and solve the problem for you.</p><br><b><span
                 class="material-icons notranslate alt-color">chevron_right</span>Contact us anytime, from
               anywhere</b><br><br><b><span class="material-icons notranslate alt-color">chevron_right</span>One-to-one
@@ -89,7 +101,17 @@
         </div>
       </div>
     </section>
-    <div class="bg bg-secondary app-py-3 app-image-gradient ">
+    <div class="bg bg-secondary app-py-3 app-image-gradient " style="
+    background: url({{asset('front/images/site/Gradient.webp')}});
+    background-color: rgba(0, 0, 0, 0);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  ">
       <div class="container">
         <div class=" row container">
           <div class="col l6 s12"><br>
@@ -103,78 +125,64 @@
           </div>
           <div class="col l6 s12">
             <center>
-                <img src="{{asset('front/s/images/site/Seven.webp')}}" class="responsive-img" style="max-height: 70vh;"><br>
+                <img src="{{asset('front/images/site/7.png')}}" class="responsive-img" style="max-height: 40vh;"><br>
             </center>
           </div>
         </div>
       </div>
     </div>
+
+    @foreach($plans as $plan)
+        <div class="" style= "visibility: visible;">
+          <div class="" style="border-radius: 10px;">
+            <center><span>{{$plan->name}}</span><br><span class="alt-color"
+              style="font-size: 38px; font-weight: bold;">${{$plan->min_investment}}</span><br><br><br>
+              @foreach($plan->features as $features)
+              <p>{{$features->name}}</p>
+              @endforeach
+              <br><a class="btn"
+              href="{{route('register')}}">PURCHASE PLAN</a>
+            </center>
+          </div>
+        </div>
+        @endforeach
+
     <section class="bg bg-secondary app-py-3">
-      <div class="app-pb-3 center wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+      <div class="app-pb-3 center wow fadeInUp slow" style= "visibility: visible; animation-name: none;">
         <h2>PRICING</h2>
       </div>
       <div class="row container">
-        <div class="col l3 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+        @foreach($plans as $plan)
+        <div class="col l3 s12" style= "visibility: visible;">
           <div class="card hoverable app-py-1 app-px-2" style="border-radius: 10px;">
-            <center><span>PLATINUM</span><br><span class="alt-color"
-                style="font-size: 38px; font-weight: bold;">$50000</span><br><br><br>
-              <p>Min Deposit $50000</p>
-              <p>Referral Bonus</p>
-              <p>Full IT Support</p><br><a class="btn "
-                href="/user/deposits/crypto.html?amount=50000&amp;to=1">PURCHASE PLAN</a>
+            <center><span>{{$plan->name}}</span><br><span class="alt-color"
+              style="font-size: 38px; font-weight: bold;">${{$plan->min_investment}}</span><br><br><br>
+              @foreach($plan->features as $features)
+              <p>{{$features->name}}</p>
+              @endforeach
+              <br><a class="btn"
+              href="{{route('register')}}">PURCHASE PLAN</a>
             </center>
           </div>
         </div>
-        <div class="col l3 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
-          <div class="card hoverable app-py-1 app-px-2" style="border-radius: 10px;">
-            <center><span>GOLD</span><br><span class="alt-color"
-                style="font-size: 38px; font-weight: bold;">$20000</span><br><br><br>
-              <p>Min Deposit $20000</p>
-              <p>Referral Bonus</p>
-              <p>Full IT Support</p><br><a class="btn "
-                href="/user/deposits/crypto.html?amount=49999&amp;to=1">PURCHASE PLAN</a>
-            </center>
-          </div>
-        </div>
-        <div class="col l3 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
-          <div class="card hoverable app-py-1 app-px-2" style="border-radius: 10px;">
-            <center><span>PREMIUM</span><br><span class="alt-color"
-                style="font-size: 38px; font-weight: bold;">$5000</span><br><br><br>
-              <p>Min Deposit $5000</p>
-              <p>Referral Bonus</p>
-              <p>Full IT Support</p><br><a class="btn "
-                href="/user/deposits/crypto.html?amount=19999&amp;to=1">PURCHASE PLAN</a>
-            </center>
-          </div>
-        </div>
-        <div class="col l3 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
-          <div class="card hoverable app-py-1 app-px-2" style="border-radius: 10px;">
-            <center><span>MINI</span><br><span class="alt-color"
-                style="font-size: 38px; font-weight: bold;">$500</span><br><br><br>
-              <p>Min Deposit $500</p>
-              <p>Referral Bonus</p>
-              <p>Full IT Support</p><br><a class="btn "
-                href="/user/deposits/crypto.html?amount=4999&amp;to=1">PURCHASE PLAN</a>
-            </center>
-          </div>
-        </div>
+        @endforeach
       </div><br>
     </section>
     <section class="bg bg-secondary app-py-3 bg-gradient-charity">
       <div class="container row app-py-3">
         <div class="col l6 s12">
-          <h2 class="wow fadeInUp slow" style="visibility: hidden; animation-name: none;">Our Charity Missions</h2>
+          <h2 class="wow fadeInUp slow" style= "visibility: visible; animation-name: none;">Our Charity Missions</h2>
           <br>
-          <p class="f-20 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">We believe everyone has
+          <p class="f-20 wow fadeInUp slow" style= "visibility: visible; animation-name: none;">We believe everyone has
             the right to a decent life. So, we channel a part of our earnings to bring positive change to local
             communities.</p><br>
-          <p class="f-20 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">Crest Capital partners
+          <p class="f-20 wow fadeInUp slow" style= "visibility: visible; animation-name: none;">Crest Capital partners
             with trusted humanitarian organizations and on-site volunteers to deliver emergency aid to disaster
             victims and run awareness and education programs. We also help vulnerable communities to overcome poverty
             and ensure healthy growth.</p>
         </div>
-        <div class="col l6 s12 wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
-          <center><img src="{{asset('front/s/images/site/Heart.png')}}" class="responsive-img" style="max-height: 350px;"></center>
+        <div class="col l6 s12 wow fadeInUp slow" style= "visibility: visible; animation-name: none;">
+          <center><img src="{{asset('front/images/site/Heart.png')}}" class="responsive-img" style="max-height: 350px;"></center>
         </div>
       </div>
     </section>
@@ -189,43 +197,43 @@
       <div class="container">
         <div class="row">
           <div class="app-my-2 col l4 s12 wow fadeInUp" data-wow-delay="0.4s"
-            style="visibility: hidden; animation-delay: 0.4s; animation-name: none;"><img
-              src="{{asset('front/s/images/site/ServiceVector3.png')}}" class="responsive-img">
+            style="visibility: visible; animation-delay: 0.4s; animation-name: none;"><img
+              src="{{asset('front/images/site/ServiceVector3.png')}}" class="responsive-img">
             <h3 class="h4">Daily Mining Outputs</h3>
             <p class="app-mb-2">Returns made from either trading or mining transactions will be added to your account
               daily and automatically.</p>
           </div>
-          <div class="app-my-2 col l4 s12 wow fadeInUp" style="visibility: hidden; animation-name: none;"><img
-              src="{{asset('front/s/images/site/ServiceVector1.png')}}" class="responsive-img">
+          <div class="app-my-2 col l4 s12 wow fadeInUp" style= "visibility: visible; animation-name: none;"><img
+              src="{{asset('front/images/site/ServiceVector1.png')}}" class="responsive-img">
             <h3 class="h4">State of the Art Mining</h3>
             <p class="app-mb-2">Productivity is a top notch quality for any investment. So, for every trade action or
               blockchain mining algorithm that we offer, we’re providing some of the highest performing systems and
               softwares that exist</p>
           </div>
           <div class="app-my-2 col l4 s12 wow fadeInUp" data-wow-delay="0.2s"
-            style="visibility: hidden; animation-delay: 0.2s; animation-name: none;"><img
-              src="{{asset('front/s/images/site/ServiceVector2.png')}}" class="responsive-img">
+            style="visibility: visible; animation-delay: 0.2s; animation-name: none;"><img
+              src="{{asset('front/images/site/ServiceVector2.png')}}" class="responsive-img">
             <h3 class="h4">Diverse Mining Portfolio</h3>
             <p class="app-mb-2">Choose from a wide range of target assets for trading and over 10 major mining
               algorithms that cut across 4 mineable cryptocurrencies</p>
           </div>
         </div>
         <div class="row">
-          <div class="app-my-2 col l4 s12 wow fadeInUp" style="visibility: hidden; animation-name: none;"><img
-              src="{{asset('front/s/images/site/ServiceVector45.png')}}" class="responsive-img">
+          <div class="app-my-2 col l4 s12 wow fadeInUp" style= "visibility: visible; animation-name: none;"><img
+              src="{{asset('front/images/site/ServiceVector45.png')}}" class="responsive-img">
             <h3 class="h4">Hardware is already running</h3>
             <p class="app-mb-2">Don’t wrestle with rig assembly and hot, noisy miners at home. We have the fastest
               bitcoin mining hardware running for you already</p>
           </div>
           <div class="app-my-2 col l4 s12 wow fadeInUp" data-wow-delay="0.2s"
-            style="visibility: hidden; animation-delay: 0.2s; animation-name: none;"><img
-              src="{{asset('front/s/images/site/ServiceVector55.png')}}" class="responsive-img">
+            style="visibility: visible; animation-delay: 0.2s; animation-name: none;"><img
+              src="{{asset('front/images/site/ServiceVector55.png')}}" class="responsive-img">
             <h3 class="h4">Intuitive Dashboard</h3>
             <p class="app-mb-2">All the financial instruments data and charts that you need, when you need them</p>
           </div>
           <div class="app-my-2 col l4 s12 wow fadeInUp" data-wow-delay="0.4s"
-            style="visibility: hidden; animation-delay: 0.4s; animation-name: none;"><img
-              src="{{asset('front/s/images/site/ServiceVector65.png')}}" class="responsive-img">
+            style="visibility: visible; animation-delay: 0.4s; animation-name: none;"><img
+              src="{{asset('front/images/site/ServiceVector65.png')}}" class="responsive-img">
             <h3 class="h4">Secure and Private</h3>
             <p class="app-mb-2">We value the privacy of our users, so we strive to keep collected user data to a
               minimum level.</p>
@@ -234,13 +242,13 @@
       </div>
     </section>
     <section class=" app-pt-3">
-      <div class="wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+      <div class="wow fadeInUp slow" style= "visibility: visible; animation-name: none;">
         <h2 class="center-align">FAQS</h2>
       </div>
       <div class="container app-py-3">
         <div class="row">
           <div class="col l6 s12">
-            <div class="app-padding wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+            <div class="app-padding wow fadeInUp slow" style= "visibility: visible; animation-name: none;">
               <ul class="collapsible">
                 <li>
                   <div class="collapsible-header" tabindex="0"><i
@@ -273,7 +281,7 @@
             </div>
           </div>
           <div class="col l6 s12">
-            <div class="app-padding wow fadeInUp slow" style="visibility: hidden; animation-name: none;">
+            <div class="app-padding wow fadeInUp slow" style= "visibility: visible; animation-name: none;">
               <ul class="collapsible">
                 <li>
                   <div class="collapsible-header" tabindex="0"><i
@@ -303,7 +311,7 @@
     <section class=" app-pb-3">
       <div class="row container ">
         <div class="col l6 s12">
-          <div class="app-padding wow fadeInUp" style="visibility: hidden; animation-name: none;">
+          <div class="app-padding wow fadeInUp" style= "visibility: visible; animation-name: none;">
             <ul class="collapsible">
               <li>
                 <div class="collapsible-header" tabindex="0"><i
@@ -352,7 +360,7 @@
           </div>
         </div>
         <div class="col l6 s12">
-          <div class="app-padding wow fadeInUp" style="visibility: hidden; animation-name: none;">
+          <div class="app-padding wow fadeInUp" style= "visibility: visible; animation-name: none;">
             <ul class="collapsible">
               <li>
                 <div class="collapsible-header" tabindex="0"><i
@@ -414,26 +422,35 @@
         </div>
       </div>
     </section>
-    <section class="bg app-pt-3 app-image-dots">
+    <section class="bg app-pt-3 app-image-dots" style="
+      background: url({{asset('front/images/site/Dots.png')}});
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    ">
       <div class="container">
-        <h2 class="center  wow fadeInUp slow" style="visibility: hidden; animation-name: none;">What Our Users Say
+        <h2 class="center  wow fadeInUp slow" style= "visibility: visible; animation-name: none;">What Our Users Say
         </h2>
         <p class="center">See what our customer say about us</p><br><br>
         <div class="container row center app-pt-3">
-          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style="visibility: hidden; animation-name: none;"><img
+          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style= "visibility: visible; animation-name: none;"><img
               src="/uploads/images/TM2.jpeg" class="circle" style="max-height: 140px;"><br><b>Henri Pacocha</b>
             <p class="app-px-1">I am extremely pleased with the platform, in terms of ease and speed of use and
               reliability.</p><br>
           </div>
-          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style="visibility: hidden; animation-name: none;"><img
+          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style= "visibility: visible; animation-name: none;"><img
               src="/uploads/images/TW2.jpeg" class="circle" style="max-height: 140px;"><br><b>Michelle Kings</b>
             <p class="app-px-1">Very simple and secure method to add some interest to your investments</p><br>
           </div>
-          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style="visibility: hidden; animation-name: none;"><img
+          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style= "visibility: visible; animation-name: none;"><img
               src="/uploads/images/TW1.jpeg" class="circle" style="max-height: 140px;"><br><b>Molly Corwin</b>
             <p class="app-px-1">I tripled the bitcoin in my wallet with this service in just 7 days.</p><br>
           </div>
-          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style="visibility: hidden; animation-name: none;"><img
+          <div class="col l3 s12 app-py-1 wow fadeInUp slow" style= "visibility: visible; animation-name: none;"><img
               src="/uploads/images/TM1.jpeg" class="circle" style="max-height: 140px;"><br><b>Lawson Robel</b>
             <p class="app-px-1">Easy to use, risk-free trading platform that increases ones earning potential.</p><br>
           </div>

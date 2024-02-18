@@ -19,8 +19,8 @@ return [
     'theme' => env('APP_THEME'),
     'id_verification' => env('ID_VERIFICATION', false),
     'email_verificaton' => env('EMAIL_VERIFICATION', false),
-    'logo' => env('LOGO', 'logo_opened.png'),
-    'favicon' => env('FAVICON', 'favicon_opened.png'),
+    'logo' => env('LOGO', 'logo.png'),
+    'favicon' => env('FAVICON', 'logo.png'),
     'show_popup' => env('SHOW_POPUP', false),
     'crypto_withdraw_require_token' => env('CRYPTO_WITHDRAW_REQUIRE_TOKEN', false),
 
