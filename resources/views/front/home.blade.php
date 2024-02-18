@@ -7,7 +7,7 @@
           <div class="col l5 s12 app-mobile-center"><br>
             <h1>Profitability On The Rise</h1><br>
             <p class="f-24">A trading platform that supports your financial goals.</p><br><a class="btn btn-large"
-              href="/signin.html">Get Started</a>
+              href="{{ route('register')}}">Get Started</a>
           </div>
           <div class="col l6 offset-l1 s12">
             <img src="{{asset('front/images/site/landing.png')}}" class="responsive-img" style="width: 400px">
@@ -25,7 +25,7 @@
           <div class="col l6 s12 wow fadeInUp slow" style= "visibility: visible; animation-name: none;">
             <div class="container"><br><br>
               <h2 style="color: white">Smooth Experience on any Device</h2><br>
-              <p class="app-text-justify f-24" style="color: white">Whether you prefer trading at your desk or on the go — Crest Capital
+              <p class="app-text-justify f-24" style="color: white">Whether you prefer trading at your desk or on the go — {{ config('app.name')}}
                 has got you covered.</p>
               <p class="f-24">The custom-built platform has been adapted for any device you may choose and switching
                 is 100% seamless.</p><br>
@@ -50,7 +50,7 @@
           <div class="row">
             <div class="col l6 s12 app-py-3">
               <h2>134 countries</h2>
-              <p class="f-24">Traders from all over the world trust Crest Capital. The platform interface is localized
+              <p class="f-24">Traders from all over the world trust {{ config('app.name')}}. The platform interface is localized
                 into 12 languages.<br><br></p>
             </div>
             <div class="col l6 s12"></div>
@@ -116,7 +116,7 @@
         <div class=" row container">
           <div class="col l6 s12"><br>
             <h2 class="app-mobile-center white-text">Seven Years of Impeccable Service</h2>
-            <p class="app-text-justify light-text f-24">Crest Capital was founded in 2014 by a group of professionals
+            <p class="app-text-justify light-text f-24">{{ config('app.name')}} was founded in 2014 by a group of professionals
               who are artfully combining the technical expertise required to Copy Professional Traders (If you can’t
               trade on your own).</p>
             <p class="app-text-justify light-text f-24">Forex Trading, Crypto Currency Trading and Stock Trading with
@@ -176,7 +176,7 @@
           <p class="f-20 wow fadeInUp slow" style= "visibility: visible; animation-name: none;">We believe everyone has
             the right to a decent life. So, we channel a part of our earnings to bring positive change to local
             communities.</p><br>
-          <p class="f-20 wow fadeInUp slow" style= "visibility: visible; animation-name: none;">Crest Capital partners
+          <p class="f-20 wow fadeInUp slow" style= "visibility: visible; animation-name: none;">{{ config('app.name')}} partners
             with trusted humanitarian organizations and on-site volunteers to deliver emergency aid to disaster
             victims and run awareness and education programs. We also help vulnerable communities to overcome poverty
             and ensure healthy growth.</p>

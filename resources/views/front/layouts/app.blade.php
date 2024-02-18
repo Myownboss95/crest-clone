@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <title>{{ config('app.name')}}</title>
 
-  <meta property=”og:title” content='Crest Capital' />
+  <meta property=”og:title” content='{{ config('app.name')}}' />
   
   <meta property=”og:image” content=”{{ asset('front/images/pwa/apple-touch-icon-114x114.png') }}” />
 
@@ -42,7 +42,7 @@
   <link rel="apple-touch-icon" sizes="1024x1024" href="{{asset('front/images/pwa/apple-touch-icon-1024x1024.png') }}">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Crest Capital">
+  <meta name="apple-mobile-web-app-title" content="{{ config('app.name')}}">
   <link rel="apple-touch-startup-image"
     media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
     href="{{asset('front/images/pwa/apple-touch-startup-image-640x1136.png') }}">
@@ -128,9 +128,9 @@
               <li><a href="/">
                   <h6>{{ config('app.name')}}</h6>
                 </a></li>
-              <li class="hide-on-med-and-down pc-pl-1"><a href="/pages/about-us">About Us</a></li>
-              <li class="hide-on-med-and-down pc-pl-1"><a href="/faq.html">Help Center</a></li>
-              <li class="hide-on-med-and-down pc-pl-1"><a href="/markets.html">Assets</a></li>
+              <li class="hide-on-med-and-down pc-pl-1"><a href="#">About Us</a></li>
+              <li class="hide-on-med-and-down pc-pl-1"><a href="#">Help Center</a></li>
+              <li class="hide-on-med-and-down pc-pl-1"><a href="#">Assets</a></li>
             </ul>
             <ul class="right ">
               <li><span class="material-icons notranslate ">light_mode</span></li>
