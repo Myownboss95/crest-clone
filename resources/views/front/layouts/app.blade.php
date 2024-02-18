@@ -176,8 +176,8 @@
                   </ul>
                 </div>
               </div>
-              <li class="hide-on-med-and-down"><a class="btn btn-secondary" href="/signin.html">Login</a></li>
-              <li class="hide-on-med-and-down"><a class="btn" href="/signup.html">Registration</a></li>
+              <li class="hide-on-med-and-down"><a class="btn btn-secondary" href="{{route('login')}}">Login</a></li>
+              <li class="hide-on-med-and-down"><a class="btn" href="{{route('register')}}">Registration</a></li>
             </ul>
           </div>
         </nav>
