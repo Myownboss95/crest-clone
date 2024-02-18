@@ -126,7 +126,7 @@
               <li><a data-target="sn" class="sidenav-trigger "><span class="material-icons notranslate">menu</span></a>
               </li>
               <li><a href="/">
-                  <h6>CREST CAPITAL</h6>
+                  <h6>{{ config('app.name')}}</h6>
                 </a></li>
               <li class="hide-on-med-and-down pc-pl-1"><a href="/pages/about-us">About Us</a></li>
               <li class="hide-on-med-and-down pc-pl-1"><a href="/faq.html">Help Center</a></li>
@@ -260,9 +260,9 @@
     <section class="bg app-py-3">
       <div class="row container">
         <div class="col l3 s12 app-mobile-center">
-          <h6>CREST CAPITAL</h6>
+          <h6> {{ config('app.name')}}</h6>
           <p><span class="material-icons notranslate">mail</span> info@crestcapital.live</p>
-          <p>© 2014 - 2023 Crest Capital</p>
+          <p>© 2014 - 2023 {{ config('app.name')}}</p>
         </div>
         <div class="col l9 s12" style="text-align: justify;"><br><small>The Transactions offered by this Website can be
             executed only by fully competent adults. Transactions with financial instruments offered on the Website
