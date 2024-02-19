@@ -132,20 +132,6 @@
       </div>
     </div>
 
-    @foreach($plans as $plan)
-        <div class="" style= "visibility: visible;">
-          <div class="" style="border-radius: 10px;">
-            <center><span>{{$plan->name}}</span><br><span class="alt-color"
-              style="font-size: 38px; font-weight: bold;">${{$plan->min_investment}}</span><br><br><br>
-              @foreach($plan->features as $features)
-              <p>{{$features->name}}</p>
-              @endforeach
-              <br><a class="btn"
-              href="{{route('register')}}">PURCHASE PLAN</a>
-            </center>
-          </div>
-        </div>
-        @endforeach
 
     <section class="bg bg-secondary app-py-3">
       <div class="app-pb-3 center wow fadeInUp slow" style= "visibility: visible; animation-name: none;">
@@ -153,7 +139,7 @@
       </div>
       <div class="row container">
         @foreach($plans as $plan)
-        <div class="col l3 s12" style= "visibility: visible;">
+        <div class="col l3 s12 wow fadeInUp slow" style= "visibility: visible; animation-name: none;">
           <div class="card hoverable app-py-1 app-px-2" style="border-radius: 10px;">
             <center><span>{{$plan->name}}</span><br><span class="alt-color"
               style="font-size: 38px; font-weight: bold;">${{$plan->min_investment}}</span><br><br><br>
@@ -438,25 +424,35 @@
         <p class="center">See what our customer say about us</p><br><br>
         <div class="container row center app-pt-3">
           <div class="col l3 s12 app-py-1 wow fadeInUp slow" style= "visibility: visible; animation-name: none;"><img
-              src="/uploads/images/TM2.jpeg" class="circle" style="max-height: 140px;"><br><b>Henri Pacocha</b>
+              src="{{asset('front/images/site/p1.jpg')}}" class="circle" style="max-height: 140px;"><br><b>Henri Pacocha</b>
             <p class="app-px-1">I am extremely pleased with the platform, in terms of ease and speed of use and
               reliability.</p><br>
           </div>
           <div class="col l3 s12 app-py-1 wow fadeInUp slow" style= "visibility: visible; animation-name: none;"><img
-              src="/uploads/images/TW2.jpeg" class="circle" style="max-height: 140px;"><br><b>Michelle Kings</b>
+              src="{{asset('front/images/site/p4.jpeg')}}" class="circle" style="max-height: 140px;"><br><b>Michelle Kings</b>
             <p class="app-px-1">Very simple and secure method to add some interest to your investments</p><br>
           </div>
           <div class="col l3 s12 app-py-1 wow fadeInUp slow" style= "visibility: visible; animation-name: none;"><img
-              src="/uploads/images/TW1.jpeg" class="circle" style="max-height: 140px;"><br><b>Molly Corwin</b>
+              src="{{asset('front/images/site/p3.png')}}" class="circle" style="max-height: 140px;"><br><b>Molly Corwin</b>
             <p class="app-px-1">I tripled the bitcoin in my wallet with this service in just 7 days.</p><br>
           </div>
           <div class="col l3 s12 app-py-1 wow fadeInUp slow" style= "visibility: visible; animation-name: none;"><img
-              src="/uploads/images/TM1.jpeg" class="circle" style="max-height: 140px;"><br><b>Lawson Robel</b>
+              src="{{asset('front/images/site/p5.jpeg')}}" class="circle" style="max-height: 140px;"><br><b>Lawson Robel</b>
             <p class="app-px-1">Easy to use, risk-free trading platform that increases ones earning potential.</p><br>
           </div>
         </div>
       </div>
     </section>
 
+    <script>
+      document.querySelectorAll('.collapsible-header').forEach(header => {
+        header.addEventListener('click', () => {
+          const content = header.nextElementSibling;
+          content.classList.toggle('active');
+          header.querySelector('.material-icons').classList.toggle('rotate');
+        });
+      });
+
+    </script>
 @endsection
 

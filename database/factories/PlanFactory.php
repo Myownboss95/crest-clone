@@ -17,9 +17,9 @@ class PlanFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->firstNameMale,
-            'tenure' => $this->faker->randomNumber(),
-            'bonus' => $this->faker->randomNumber()
+            'name' => $this->faker->randomElement(['Gold', 'Platinum', 'Premium', 'Mini']),
+            'tenure' => 50,
+            'bonus' => 10
         ];
     }
 

@@ -16,7 +16,7 @@ class FrontendController extends Controller
     public function home()
     {
         $setting = Settings::first();
-        $plans = Plan::with('features')->latest();
+        $plans = Plan::with('features')->latest()->get();
         return view("$this->theme.home", [
             'setting' => $setting,
             'plans' => $plans
