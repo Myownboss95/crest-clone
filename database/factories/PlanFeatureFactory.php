@@ -17,7 +17,7 @@ class PlanFeatureFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->randomElements([
+            'name' => $this->faker->randomElement([
                 'Min Deposit $50000',
                 'Referral Bonus',
                 'Full IT Support'
