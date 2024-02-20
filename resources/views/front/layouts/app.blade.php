@@ -132,7 +132,7 @@
               <li class="hide-on-med-and-down pc-pl-1"><a href="{{route('front.faqs')}}">FAQs</a></li>
             </ul>
             <ul class="right ">
-              <li><span class="material-icons notranslate ">light_mode</span></li>
+              {{-- <li><span class="material-icons notranslate ">light_mode</span></li> --}}
               <li data-target="tl" class="dropdown-trigger notranslate "><span class="flag-icon flag-icon-us"></span>
               </li>
               <div id="tl" class="dropdown-content" tabindex="0">
