@@ -66,14 +66,14 @@ Route::middleware('guest')->group(function () {
 Route::match(['get', 'post'], 'set-locale/{locale}', [LocaleController::class, 'setLocale'])->name('set-locale');
 
 
-$theme = config('app.theme', 'front2');
+$theme = config('app.theme', 'front');
 if ($theme != 'front3') {
     Route::controller(FrontendController::class)->group(function () {
         Route::get('/', "home")->name('front.index');
-        Route::get('/about-us', "about");
+        Route::get('/about-us', "about")->name('front.about-us');
         Route::get('/contact-us', "contact")->name('front.contact');
         Route::get('/terms-and-conditions', "terms_and_conditions");
-        Route::get('/faqs', "faqs");
+        Route::get('/faqs', "faqs")->name('front.faqs');
     });
 } else {
     Route::controller(FrontThreeController::class)->group(function () {

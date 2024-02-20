@@ -444,15 +444,6 @@
       </div>
     </section>
 
-    <script>
-      document.querySelectorAll('.collapsible-header').forEach(header => {
-        header.addEventListener('click', () => {
-          const content = header.nextElementSibling;
-          content.classList.toggle('active');
-          header.querySelector('.material-icons').classList.toggle('rotate');
-        });
-      });
-
-    </script>
+    
 @endsection
 

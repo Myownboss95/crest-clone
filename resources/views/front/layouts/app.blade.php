@@ -128,9 +128,8 @@
               <li><a href="/">
                   <h6>{{ config('app.name')}}</h6>
                 </a></li>
-              <li class="hide-on-med-and-down pc-pl-1"><a href="#">About Us</a></li>
-              <li class="hide-on-med-and-down pc-pl-1"><a href="#">Help Center</a></li>
-              <li class="hide-on-med-and-down pc-pl-1"><a href="#">Assets</a></li>
+              <li class="hide-on-med-and-down pc-pl-1"><a href="{{route('front.about-us')}}">About Us</a></li>
+              <li class="hide-on-med-and-down pc-pl-1"><a href="{{route('front.faqs')}}">FAQs</a></li>
             </ul>
             <ul class="right ">
               <li><span class="material-icons notranslate ">light_mode</span></li>
@@ -261,8 +260,8 @@
       <div class="row container">
         <div class="col l3 s12 app-mobile-center">
           <h6> {{ config('app.name')}}</h6>
-          <p><span class="material-icons notranslate">mail</span> info@crestcapital.live</p>
-          <p>© 2014 - 2023 {{ config('app.name')}}</p>
+          <p><span class="material-icons notranslate">mail</span> info@maxtopcapital.live</p>
+          <p>© 2014 - 2024 {{ config('app.name')}}</p>
         </div>
         <div class="col l9 s12" style="text-align: justify;"><br><small>The Transactions offered by this Website can be
             executed only by fully competent adults. Transactions with financial instruments offered on the Website
@@ -274,6 +273,18 @@
     </section>
 <script src="{{ asset('front/crest-capital.js')}}"></script>
 <script src="{{ asset('front/javascript/index.min.js')}}"></script>
+<script>
+  document.querySelectorAll('.collapsible-header').forEach(header => {
+    header.addEventListener('click', () => {
+      console.log('yes')
+      const content = header.nextElementSibling;
+      const isVisible = content.style.display === 'block'; // Check if visible
+      content.style.display = isVisible ? 'none' : 'block'; // Set display based on visibility
+      header.querySelector('.material-icons').classList.toggle('rotate');
+    });
+  });
+
+</script>
 
 </body>
 
