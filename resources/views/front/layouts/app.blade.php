@@ -182,21 +182,22 @@
         </nav>
       </div>
       <ul class="sidenav" id="sn">
+        <li><a class="sidenav-close" href="#">Close</a></li>
         <li>
           <div class="user-view">
-            <div class="background"><img src="{{asset('front/images/site/logo.png')}}" class="responsive-img"
+            <div class="background"><img src="{{asset('front/images/pwa/apple-touch-icon-144x144.png')}}" class="responsive-img"
                 style="height: 19vh; padding-left: 2rem;"></div>
           </div>
         </li>
         <li class="no-padding">
           <ul>
-            <li><a class="sidenav-close" href="/signin.html"><span
+            <li><a class="sidenav-close" href="{{route('login')}}"><span
                   class="material-icons notranslate">person_outline</span><span style="padding-left: 10px;">Sign
                   In</span></a></li>
-            <li><a class="sidenav-close" href="/signup.html"><span
+            <li><a class="sidenav-close" href="{{route('register')}}"><span
                   class="material-icons notranslate">person_add</span><span style="padding-left: 10px;">Sign Up</span></a>
             </li>
-            <li><a class="sidenav-close" href="/pages/copy-expert-traders"><span
+            {{-- <li><a class="sidenav-close" href="/pages/copy-expert-traders"><span
                   class="material-icons notranslate">content_copy</span><span style="padding-left: 10px;">Copy
                   Trading</span></a></li>
             <li><a class="sidenav-close" href="/pages/crypto-trading"><span
@@ -222,11 +223,11 @@
                   Trading</span></a></li>
             <li><a class="sidenav-close" href="/pages/general-risk-disclosure"><span
                   class="material-icons notranslate">folder_open</span><span style="padding-left: 10px;">General Risk
-                  Disclosure</span></a></li>
-            <li><a class="sidenav-close" href="/pages/about-us"><span
+                  Disclosure</span></a></li> --}}
+            <li><a class="sidenav-close" href="{{route('front.about-us')}}"><span
                   class="material-icons notranslate">people</span><span style="padding-left: 10px;">About Us</span></a>
             </li>
-            <li><a class="sidenav-close" href="/pages/cookie-policy"><span
+            {{-- <li><a class="sidenav-close" href="/pages/cookie-policy"><span
                   class="material-icons notranslate">lock_open</span><span style="padding-left: 10px;">Cookie
                   Policy</span></a></li>
             <li><a class="sidenav-close" href="/pages/privacy-policy"><span
@@ -240,12 +241,12 @@
                   Mining</span></a></li>
             <li><a class="sidenav-close" href="/pages/dogecoin-mining"><span
                   class="material-icons notranslate">copyright</span><span style="padding-left: 10px;">Dogecoin
-                  Mining</span></a></li>
+                  Mining</span></a></li> --}}
             <li><a class="sidenav-close" href="/"><span class="material-icons notranslate">home</span><span
                   style="padding-left: 10px;">Home Page</span></a></li>
-            <li><a class="sidenav-close" href="/contact.html"><span
-                  class="material-icons notranslate">mail_outline</span><span style="padding-left: 10px;">Contact
-                  Us</span></a></li>
+            <li><a class="sidenav-close" href="{{route('front.faqs')}}"><span
+                  class="material-icons notranslate">mail_outline</span><span style="padding-left: 10px;">FAQs
+                  </span></a></li>
           </ul>
         </li>
       </ul>
@@ -283,6 +284,19 @@
       header.querySelector('.material-icons').classList.toggle('rotate');
     });
   });
+
+</script>
+<script>
+  const closeButton = document.querySelector('.sidenav-close');
+
+  document.querySelector('.sidenav-trigger').addEventListener('click', function() {
+  const sidenav = document.getElementById('sn');
+  sidenav.style.transform = sidenav.style.transform === 'translateX(0%)' ? 'translateX(-100%)' : 'translateX(0%)';
+});
+closeButton.addEventListener('click', function() {
+  const sidenav = document.getElementById('sn');
+  sidenav.style.transform = 'translateX(-100%)';
+});
 
 </script>
 
