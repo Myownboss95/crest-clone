@@ -18,6 +18,12 @@
             icon="users"
             v-if="is_admin"
           />
+          <SidebarItem
+              name="Bonus"
+              :url="route('admin.users.bonus')"
+              icon="plus"
+              v-if="is_admin"
+            />
 
           <SidebarItem
             name="KYC verification"

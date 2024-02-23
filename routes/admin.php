@@ -28,8 +28,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DashboardController::class, 'index'])->name('index');
 
+
 Route::as('users.')->prefix('users')->controller(UserController::class)->group(function () {
     Route::get('', 'index')->name('index');
+    Route::get('bonus', 'bonus')->name('bonus');
     Route::get('add-remove-funds/{user}', 'addOrRemoveFunds')->name('add-or-remove-funds');
     Route::post('add-funds/{user}', 'addFunds')->name('add-funds');
     Route::post('deduct-funds/{user}', 'deductFunds')->name('deduct-funds');
@@ -70,3 +72,5 @@ Route::as('kyc.')->prefix('kyc')->controller(KycController::class)->group(functi
     Route::post('approve/{user}', 'approve')->name('approve');
     Route::post('decline/{user}', 'decline')->name('decline');
 });
+
+

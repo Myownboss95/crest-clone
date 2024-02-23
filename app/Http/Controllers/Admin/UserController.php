@@ -45,6 +45,41 @@ class UserController extends Controller
             })->withQueryString(),
         ]);
     }
+    public function bonus(Request $request)
+    {
+        $users = new User();
+        $query = $users->newQuery();
+        if ($request->filled('search')) {
+            $search = $request->input('search');
+            $query->where([
+                ['last_name', 'LIKE', "%$search%"],
+                ['is_admin', '=', 0],
+            ]);
+            $query->orWhere([
+                ['first_name', 'LIKE', "%$search%"],
+                ['is_admin', '=', 0],
+            ]);
+            $query->orWhere([
+                ['email', 'LIKE', "%$search%"],
+                ['is_admin', '=', 0],
+            ]);
+        }
+
+        if ($request->filled('status')) {
+            $status = $request->input('status');
+            if ($status != 'all') {
+                $query->where('status', '=', $status);
+            }
+        }
+        $query->where('is_admin', '=', 0);
+        $query->with('documents');
+
+        return inertia('admin.users.bonus', [
+            'users' => $query->paginate()->through(function ($user, $key) {
+                return $user;
+            })->withQueryString(),
+        ]);
+    }
 
     public function loginAs(User $user)
     {

@@ -18,22 +18,23 @@ class DashboardController extends Controller
         $users = $getUsers->newQuery()->where('is_admin', '=', 0)->limit(6)->get();
         $num_users = User::where('is_admin', '=', 0)->count();
         //return withdrawals
-        $getWithdrawals = new Transaction();
-        $withdrawals = $getWithdrawals->newQuery()->where('type', 'withdrawal')->limit(6)->get();
+        $transaction = new Transaction();
+        $withdrawals = $transaction->newQuery()->where('type', 'withdrawal')->limit(6)->get();
         $num_withdrawals = Transaction::where('type', 'withdrawal')->count();
         //return deposits
-        $getDeposits = new Transaction();
-        $deposits = $getDeposits->newQuery()->where('type', 'deposit')->limit(6)->get();
+
+        $deposits = $transaction->newQuery()->where('type', 'deposit')->limit(6)->get();
         $num_deposits = Transaction::where('type', 'deposit')->count();
         //return buy trades
-        $getBuyTrades = new Trade();
-        $buyTrades = $getBuyTrades->newQuery()->where('type', 'buy')->limit(6)->get();
+        $trades = new Trade();
+        $buyTrades = $trades->newQuery()->where('type', 'buy')->limit(6)->get();
         $num_buyTrades = Transaction::where('type', 'buy')->count();
         //return sell trades
-        $getSellTrades = new Trade();
-        $sellTrades = $getSellTrades->newQuery()->where('type', 'sell')->limit(6)->get();
+
+        $sellTrades = $trades->newQuery()->where('type', 'sell')->limit(6)->get();
         $num_sellTrades = Transaction::where('type', 'buy')->count();
 
+        // dd($transaction->newQuery()->sum('amount'));
         return inertia('admin.index', [
             'users' => $users,
             'user_count' => $num_users,
@@ -45,6 +46,7 @@ class DashboardController extends Controller
             'num_buyTrades' => $num_buyTrades,
             'sellTrades' => $sellTrades,
             'num_sellTrades' => $num_sellTrades,
+            'total_transactions' => $transaction->newQuery()->sum('amount')
         ]);
     }
 }
