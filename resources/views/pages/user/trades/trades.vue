@@ -20,7 +20,7 @@
             :options="{
               '': 'Select Asset type',
               crypto: 'Crypto Currency',
-              commodity: 'Commodity',
+              stock: 'Stock',
               currency: 'Currency',
             }"
             v-model="form.tradeable_type"
