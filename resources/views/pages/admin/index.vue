@@ -7,13 +7,10 @@
         <div class="card-body">
           <div class="row align-items-center">
             <div class="col-6">
-              <span class="text-muted mb-3 lh-1 d-block text-truncate"
-                >Total Users</span
-              >
+              <span class="text-muted mb-3 lh-1 d-block text-truncate">Total Users</span>
               <h4 class="mb-3">
                 <span class="counter-value" data-target="{{user_count}}">
-                  {{ user_count }}</span
-                >
+                  {{ user_count }}</span>
               </h4>
             </div>
             <div class="col-6">
@@ -29,13 +26,10 @@
         <div class="card-body">
           <div class="row align-items-center">
             <div class="col-6">
-              <span class="text-muted mb-3 lh-1 d-block"
-                >Total Trades</span
-              >
+              <span class="text-muted mb-3 lh-1 d-block">Total Trades</span>
               <h4 class="mb-3">
                 <span class="counter-value" data-target="{{num_buyTrades + num_sellTrades}}">
-                  {{ num_buyTrades + num_sellTrades }}</span
-                >
+                  {{ num_buyTrades + num_sellTrades }}</span>
               </h4>
             </div>
             <div class="col-6">
@@ -50,13 +44,10 @@
         <div class="card-body">
           <div class="row align-items-center">
             <div class="col-6">
-              <span class="text-muted mb-3 lh-1 d-block"
-                >Total Deposits</span
-              >
+              <span class="text-muted mb-3 lh-1 d-block">Total Deposits</span>
               <h4 class="mb-3">
                 <span class="counter-value" data-target="{{deposits_count}}">
-                  {{ deposits_count }}</span
-                >
+                  {{ deposits_count }}</span>
               </h4>
             </div>
             <div class="col-6">
@@ -71,12 +62,10 @@
         <div class="card-body">
           <div class="row align-items-center">
             <div class="col-6">
-              <span class="text-muted mb-3 lh-1 d-block"
-                >Total Trades</span
-              >
+              <span class="text-muted mb-3 lh-1 d-block">Total Investments Amount</span>
               <h4 class="mb-3">
                 <span class="counter-value" data-target="{{withdrawals_count}}">
-                  {{withdrawals_count}}</span>
+                  {{ withdrawals_count }}</span>
               </h4>
             </div>
             <div class="col-6">
@@ -96,45 +85,42 @@
     <div class="p-2 col-md-6 col-sm-12">
       <div class="card shadow ">
         <div class="card-body m-3">
-        <div class="row align-items-center">
-          <h4 class="mb-3">Recent Withdrawals</h4>
-          <div v-if="withdrawals.length">
-            <div class="table-responsive">
-              <table class="table mb-0">
-                <thead class="table-light">
-                  <tr>
-                    <th>Reference</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(withdrawal, key) in withdrawals" :key="key">
-                    <td>{{ withdrawal.reference }}</td>
-                    <td>{{ withdrawal.amount }}</td>
-                    <td>{{ withdrawal.status }}</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="row align-items-center">
+            <h4 class="mb-3">Recent Withdrawals</h4>
+            <div v-if="withdrawals.length">
+              <div class="table-responsive">
+                <table class="table mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Reference</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(withdrawal, key) in withdrawals" :key="key">
+                      <td>{{ withdrawal.reference }}</td>
+                      <td>{{ withdrawal.amount }}</td>
+                      <td>{{ withdrawal.status }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div v-else>
+              <span class="ms-1 text-muted font-size-13">No Transactions to Display</span>
             </div>
           </div>
-          <div v-else>
-            <span class="ms-1 text-muted font-size-13"
-              >No Transactions to Display</span
-            >
+          <div class="text-nowrap mb-2">
+            <span class="badge bg-soft-success text-success">
+              {{
+                !isNaN(withdrawals_count) && withdrawals_count != 0 ?
+                withdrawals_count - 6 : "0" }}
+              more</span>
           </div>
+          <inertia-link :href="route('admin.withdrawals.index')" class="btn btn-primary">View Withdrawals<i
+              class="mdi mdi-arrow-right ms-1"></i></inertia-link>
         </div>
-        <div class="text-nowrap mb-2">
-          <span class="badge bg-soft-success text-success">
-            {{
-            !isNaN(withdrawals_count) && withdrawals_count != 0 ?
-             withdrawals_count - 6 : "0" }}
-            more</span>
-        </div>
-        <inertia-link :href="route('admin.withdrawals.index')" class="btn btn-primary"
-          >View Withdrawals<i class="mdi mdi-arrow-right ms-1"></i
-        ></inertia-link>
-      </div>
       </div>
 
     </div>
@@ -142,194 +128,178 @@
     <div class="p-2 col-md-6 col-sm-12">
       <div class="card shadow">
         <div class="card-body m-3">
-        <div class="row align-items-center">
-          <h4 class="mb-3">Recent Deposits</h4>
-          <div v-if="deposits.length">
-            <div class="table-responsive">
-              <table class="table mb-0">
-                <thead class="table-light">
-                  <tr>
-                    <th>Reference</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(deposit, key) in deposits" :key="key">
-                    <td>{{ deposit.reference }}</td>
-                    <td>{{ deposit.amount }}</td>
-                    <td>{{ deposit.status }}</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="row align-items-center">
+            <h4 class="mb-3">Recent Deposits</h4>
+            <div v-if="deposits.length">
+              <div class="table-responsive">
+                <table class="table mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Reference</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(deposit, key) in deposits" :key="key">
+                      <td>{{ deposit.reference }}</td>
+                      <td>{{ deposit.amount }}</td>
+                      <td>{{ deposit.status }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div v-else>
+              <span class="ms-1 text-muted font-size-13">No Transactions to Display</span>
             </div>
           </div>
-          <div v-else>
-            <span class="ms-1 text-muted font-size-13"
-              >No Transactions to Display</span
-            >
-          </div>
-        </div>
-        <div class="text-nowrap mb-2">
-          <span class="badge bg-soft-success text-success">
-            {{
-              !isNaN(deposits_count) && deposits_count != 0
+          <div class="text-nowrap mb-2">
+            <span class="badge bg-soft-success text-success">
+              {{
+                !isNaN(deposits_count) && deposits_count != 0
                 ? deposits_count - 6
                 : "0"
-            }}
-            more</span
-          >
-          <!-- <span class="ms-1 text-muted font-size-13"><a href="#" >View More</a></span> -->
+              }}
+              more</span>
+            <!-- <span class="ms-1 text-muted font-size-13"><a href="#" >View More</a></span> -->
+          </div>
+          <inertia-link :href="route('admin.deposits.index')" class="btn btn-primary">View Deposits<i
+              class="mdi mdi-arrow-right ms-1"></i></inertia-link>
         </div>
-       <inertia-link :href="route('admin.deposits.index')" class="btn btn-primary"
-          >View Deposits<i class="mdi mdi-arrow-right ms-1"></i
-        ></inertia-link>
-      </div>
       </div>
 
     </div>
     <div class="p-2 col-md-6 col-sm-12">
       <div class="card shadow">
         <div class="card-body m-3">
-        <div class="row align-items-center">
-          <h4 class="mb-3">Recent Buy Trades</h4>
-          <div v-if="buyTrades.length">
-            <div class="table-responsive">
-              <table class="table mb-0">
-                <thead class="table-light">
-                  <tr>
-                    <th>Amount</th>
-                    <th>Type</th>
-                    <th>Stop Loss</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(buyTrade, key) in buyTrades" :key="key">
-                    <td>{{ buyTrade.amount }}</td>
-                    <td>{{ buyTrade.type }}</td>
-                    <td>{{ buyTrade.stop_loss }}</td>
-                    <td>{{ buyTrade.status }}</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="row align-items-center">
+            <h4 class="mb-3">Recent Buy Trades</h4>
+            <div v-if="buyTrades.length">
+              <div class="table-responsive">
+                <table class="table mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Amount</th>
+                      <th>Type</th>
+                      <th>Stop Loss</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(buyTrade, key) in buyTrades" :key="key">
+                      <td>{{ buyTrade.amount }}</td>
+                      <td>{{ buyTrade.type }}</td>
+                      <td>{{ buyTrade.stop_loss }}</td>
+                      <td>{{ buyTrade.status }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div v-else>
+              <span class="ms-1 text-muted font-size-13">No Transactions to Display</span>
             </div>
           </div>
-          <div v-else>
-            <span class="ms-1 text-muted font-size-13"
-              >No Transactions to Display</span
-            >
-          </div>
-        </div>
-        <div class="text-nowrap mb-2">
-          <span class="badge bg-soft-success text-success">
-            {{
-              !isNaN(num_buyTrades) && num_buyTrades != 0
+          <div class="text-nowrap mb-2">
+            <span class="badge bg-soft-success text-success">
+              {{
+                !isNaN(num_buyTrades) && num_buyTrades != 0
                 ? num_buyTrades - 6
                 : "0"
-            }}
-            more</span
-          >
-          <!-- <span class="ms-1 text-muted font-size-13"><a href="#" >View More</a></span> -->
+              }}
+              more</span>
+            <!-- <span class="ms-1 text-muted font-size-13"><a href="#" >View More</a></span> -->
+          </div>
+          <inertia-link :href="route('admin.trades.index')" class="btn btn-primary">View Trades<i
+              class="mdi mdi-arrow-right ms-1"></i></inertia-link>
         </div>
-        <inertia-link :href="route('admin.trades.index')" class="btn btn-primary"
-          >View Trades<i class="mdi mdi-arrow-right ms-1"></i
-        ></inertia-link>
-      </div>
       </div>
 
     </div>
     <div class="p-2 col-md-6 col-sm-12">
       <div class="card shadow">
         <div class="card-body m-3">
-        <div class="row align-items-center">
-          <h4 class="mb-3">Recent Sell Trades</h4>
-          <div v-if="sellTrades.length">
-            <div class="table-responsive">
-              <table class="table mb-0">
-                <thead class="table-light">
-                  <tr>
-                    <th>Amount</th>
-                    <th>Type</th>
-                    <th>Stop Loss</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(sellTrade, key) in sellTrades" :key="key">
-                    <td>{{ sellTrade.amount }}</td>
-                    <td>{{ sellTrade.type }}</td>
-                    <td>{{ sellTrade.stop_loss }}</td>
-                    <td>{{ sellTrade.status }}</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="row align-items-center">
+            <h4 class="mb-3">Recent Sell Trades</h4>
+            <div v-if="sellTrades.length">
+              <div class="table-responsive">
+                <table class="table mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Amount</th>
+                      <th>Type</th>
+                      <th>Stop Loss</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(sellTrade, key) in sellTrades" :key="key">
+                      <td>{{ sellTrade.amount }}</td>
+                      <td>{{ sellTrade.type }}</td>
+                      <td>{{ sellTrade.stop_loss }}</td>
+                      <td>{{ sellTrade.status }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div v-else>
+              <span class="ms-1 text-muted font-size-13">No Transactions to Display</span>
             </div>
           </div>
-          <div v-else>
-            <span class="ms-1 text-muted font-size-13"
-              >No Transactions to Display</span
-            >
-          </div>
-        </div>
-        <div class="text-nowrap mb-2">
-          <span class="badge bg-soft-success text-success">
-            {{
-              !isNaN(num_sellTrades) && num_sellTrades != 0
+          <div class="text-nowrap mb-2">
+            <span class="badge bg-soft-success text-success">
+              {{
+                !isNaN(num_sellTrades) && num_sellTrades != 0
                 ? num_sellTrades - 6
                 : "0"
-            }}
-            more</span
-          >
+              }}
+              more</span>
+          </div>
+          <inertia-link :href="route('admin.trades.index')" class="btn btn-primary">View Trades<i
+              class="mdi mdi-arrow-right ms-1"></i></inertia-link>
         </div>
-        <inertia-link :href="route('admin.trades.index')" class="btn btn-primary"
-          >View Trades<i class="mdi mdi-arrow-right ms-1"></i
-        ></inertia-link>
-      </div>
       </div>
 
     </div>
     <div class="p-2 col-md-12 col-sm-12">
       <div class="card shadow">
         <div class="card-body m-3">
-        <div class="row align-items-center">
-          <h4 class="mb-3">Recent Users</h4>
-          <div v-if="users.length">
-            <div class="table-responsive">
-              <table class="table mb-0">
-                <thead class="table-light">
-                  <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(user, key) in users" :key="key">
-                    <td>{{ `${user.first_name}` }}</td>
-                    <td>{{user.last_name}}</td>
-                    <td>{{ user.email }}</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="row align-items-center">
+            <h4 class="mb-3">Recent Users</h4>
+            <div v-if="users.length">
+              <div class="table-responsive">
+                <table class="table mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Username</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(user, key) in users" :key="key">
+                      <td>{{ `${user.first_name}` }}</td>
+                      <td>{{ user.last_name }}</td>
+                      <td>{{ user.email }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div v-else>
+              <span class="ms-1 text-muted font-size-13">No Users to Display</span>
             </div>
           </div>
-          <div v-else>
-            <span class="ms-1 text-muted font-size-13"
-              >No Users to Display</span
-            >
+          <div class="text-nowrap mb-2">
+            <span class="badge bg-soft-success text-success">
+              + {{ !isNaN(user_count) ? user_count - 6 : "0" }}
+              more users</span>
           </div>
+          <inertia-link :href="route('admin.users.index')" class="btn btn-primary">View All Users <i
+              class="mdi mdi-arrow-right ms-1"></i></inertia-link>
         </div>
-        <div class="text-nowrap mb-2">
-          <span class="badge bg-soft-success text-success">
-            + {{ !isNaN(user_count) ? user_count - 6 : "0" }}
-            more users</span
-          >
-        </div>
-        <inertia-link :href="route('admin.users.index')" class="btn btn-primary"
-          >View All Users <i class="mdi mdi-arrow-right ms-1"></i
-        ></inertia-link>
-      </div>
       </div>
 
     </div>
