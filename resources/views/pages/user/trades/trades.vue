@@ -21,7 +21,8 @@
               '': 'Select Asset type',
               crypto: 'Crypto Currency',
               stock: 'Stock',
-              currency: 'Currency',
+              option: 'Option',
+              future: 'Future'
             }"
             v-model="form.tradeable_type"
           />

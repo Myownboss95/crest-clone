@@ -9,7 +9,7 @@
 
 
           <FormSelect id="demo" name="type" label="Demo Plan"
-            :options="{ 'crypto': 'Crypto Currency', 'stock': 'Stock', 'currency': 'Currency' }" v-model="form.type" />
+            :options="{ 'crypto': 'Crypto Currency', 'stock': 'Stock', 'option': 'Option', 'future': 'Future' }" v-model="form.type" />
           <FormButton type="submit" class="w-100 btn btn-outline-primary mt-3" :disabled="form.processing">
             <ButtonLoader text="Create Tradeable Asset" :loading="form.processing" />
           </FormButton>

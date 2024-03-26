@@ -17,9 +17,9 @@ return new class extends Migration
         Schema::create('tradeables', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->enum('type', ['crypto', 'stock', 'currency']);
+            $table->enum('type', ['crypto', 'stock', 'option', 'future']);
             $table->timestamps();
-        });
+        }); 
     }
 
     /**
