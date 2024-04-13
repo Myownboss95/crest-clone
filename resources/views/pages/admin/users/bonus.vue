@@ -115,7 +115,7 @@ const deleteUser = id => {
           }
           return data;
         })
-        .get(route('admin.users.index'), {
+        .get(route('admin.users.bonus'), {
           preserveState: true,
         });
     }
